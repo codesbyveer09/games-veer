@@ -28,23 +28,6 @@ for i in range(tl_plrs):
     d_plrs["Clr"].append(l_clr[clrs[i]])
 
 
-# Cards info into Dictionary
-with open("mpcards.csv", "r") as cards:
-    csv_reader = csv.reader(cards, delimiter=",")
-    k=0
-    for i in csv_reader:
-        l = 0
-        for j in i:
-
-            if k == 0:
-                dict.setdefault(j, [])
-                l_keys.append(j)
-            else:
-                dict[l_keys[l]].append(j)
-            l=l+1
-        k=k+1
-
-
 def owner(crd, coord):
     for i in range(tl_plrs):
         if crd in d_plrs["Cards"][i]:
