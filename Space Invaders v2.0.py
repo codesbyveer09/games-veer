@@ -382,6 +382,4 @@ while True:
         if event.key==pygame.K_ESCAPE:
             exit()
 
-    print(int(scr))
-
     refresh()
